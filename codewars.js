@@ -27,3 +27,15 @@ console.log(
 }
 accum('dfgdfg')
 */
+
+/*
+/!*7 kyu vowel count
+https://www.codewars.com/kata/vowel-count*!/
+function getCount(str) {
+    /!*g - глобальное сопоставление
+    i-игнорирование регистра при сопоставлении*!/
+    let n = str.match(/[aeiou]/gi)
+    console.log(n ? n.length : 0)
+}
+getCount('sEgdenfdbi')
+*/
