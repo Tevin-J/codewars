@@ -39,3 +39,85 @@ function getCount(str) {
 }
 getCount('sEgdenfdbi')
 */
+
+/*
+/!*7 kyu highest and lowest
+https://www.codewars.com/kata/554b4ac871d6813a03000035/train/javascript*!/
+function highAndLow(numbers){
+       let arr =  numbers.split(' ').sort((a, b) => {
+        return b - a
+    })
+   return `${arr[0]} ${arr[arr.length -1]}`
+}
+highAndLow('12 4 122')
+*/
+
+/*
+/!*7 kyu Get the Middle Character
+https://www.codewars.com/kata/56747fd5cb988479af000028/train/javascript*!/
+function getMiddle(s) {
+    let arr = s.split('')
+    let res
+    for (let i=0; i < arr.length; i++) {
+        if (arr.length%2 !== 0) {
+           res = arr[(arr.length-1)/2]
+        } else {
+            res = arr.slice((arr.length/2)-1, (arr.length/2)+1).join('')
+        }
+    }
+    console.log(res)
+}
+getMiddle("midtf")
+*/
+/*/!*6 kyu Persistent Bugger.
+https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/solutions/javascript*!/
+function persistense(num) {
+    debugger
+    const str = num.toString()
+    if (str.length === 1) {
+        return 0
+    }
+    const nextNum = str.split('').reduce((a, b) => a * b, 1)
+    return 1 + persistense(nextNum)
+}
+console.log(persistense(39))*/
+/*/!*5 kyu Moving Zeros To The End
+https://www.codewars.com/kata/52597aa56021e91c93000cb0/train/javascript*!/
+const moveZeros = (arr) => {
+    console.log(arr.filter((el) => {
+        return el !== 0
+    }).concat(arr.filter((el) => {
+        return el === 0
+    })))
+}
+moveZeros([1,2,0,1,0,1,0,3,0,1])*/
+/*/!*7 kyu Shortest Word
+https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/solutions/javascript*!/
+let findShort = (s) => {
+    return s.split(' ').sort((a, b) => a.length - b.length)[0].length
+}
+console.log(findShort('sdfg fgdfgdfg ertyer fg dfg'))*/
+/*/!*7 kyu Basic Calculator
+https://www.codewars.com/kata/5296455e4fe0cdf2e000059f/solutions/javascript*!/
+function calculate(num1, operation, num2) {
+    if (operation === '/' && num2 === 0) {
+        return null
+    }
+    switch (operation) {
+        case '+':
+            return num1 + num2
+            break
+        case '-':
+            return num1 - num2
+            break
+        case '*':
+            return num1 * num2
+            break
+        case '/':
+            return num1 / num2
+            break
+        default:
+            return null
+    }
+}
+console.log(calculate(3.2,"/",0))*/
