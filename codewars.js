@@ -115,6 +115,7 @@ function calculate(num1, operation, num2) {
     }
 }
 console.log(calculate(3.2,"/",0))*/
+
 /*/!*6 kyu Counting Duplicates
 https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1/solutions/javascript*!/
 function duplicateCount(text) {
@@ -132,6 +133,7 @@ function duplicateCount(text) {
     return count
 }
 console.log(duplicateCount("aAdfsfbnwasds11"))*/
+
 /*/!*6 kyu Find the odd int
 https://www.codewars.com/kata/54da5a58ea159efa38000836/solutions/javascript*!/
 function findOdd(numbers) {
@@ -148,3 +150,19 @@ function findOdd(numbers) {
     }
 }
 console.log(findOdd([20,20,7]))*/
+
+/*/!*7 kyu Descending Order
+https://www.codewars.com/kata/5467e4d82edf8bbf40000155/solutions/javascript*!/
+function descendingOrder(num) {
+    return Number(num.toString().split('').sort((a, b) => b - a).join(''))
+}
+console.log(descendingOrder(3672))*/
+
+/*/!*6 kyu Find The Parity Outlier
+https://www.codewars.com/kata/5526fc09a1bbd946250002dc/solutions/javascript*!/
+function findOutlier(integers) {
+    let even = integers.filter(el => el % 2 === 0)
+    let odd = integers.filter(el => el % 2 !== 0)
+    return even.length === 1 ? even[0] : odd[0]
+}
+console.log(findOutlier([2,6,8,10,3]))*/
