@@ -166,3 +166,42 @@ function findOutlier(integers) {
     return even.length === 1 ? even[0] : odd[0]
 }
 console.log(findOutlier([2,6,8,10,3]))*/
+
+/*/!*6 kyu Stop gninnipS My sdroW!
+https://www.codewars.com/kata/5264d2b162488dc400000001/solutions/javascript*!/
+function spinWords(s){
+    let res = []
+    let arr = s.split(' ')
+    arr.forEach(word => {
+        if (word.length > 4) {
+            res.push(word.split('').reverse().join(''))
+        } else {
+            res.push(word)
+        }
+    })
+    return res.join(' ')
+}
+console.log(spinWords("Hey fellow warriors"))*/
+
+/*/!*6 kyu Duplicate Encoder
+https://www.codewars.com/kata/54b42f9314d9229fd6000d9c/solutions/javascript*!/
+function duplicateEncode(word){
+    let res = []
+    let count = 0
+    for (let i = 0; i < word.length; i++) {
+        for (let j = 0; j < word.length; j++) {
+            if (word[i].toLowerCase() === word[j].toLowerCase())  {
+                count += 1
+            }
+        }
+        if (count < 2) {
+            res.push('(')
+        }
+        if (count > 1) {
+            res.push(')')
+        }
+        count = 0
+    }
+    return res.join('')
+}
+console.log(duplicateEncode("recede"))*/
