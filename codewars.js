@@ -205,3 +205,48 @@ function duplicateEncode(word){
     return res.join('')
 }
 console.log(duplicateEncode("recede"))*/
+
+/*/!*6 kyu Who likes it?
+https://www.codewars.com/kata/5266876b8f4bf2da9b000362/solutions/javascript*!/
+function likes(names) {
+    switch (names.length) {
+        case 0:
+            return 'no one likes this'
+            break
+        case 1:
+            return `${names[0]} likes this`
+            break
+        case 2:
+            return `${names[0]} and ${names[1]} like this`
+            break
+        case 3:
+            return `${names[0]}, ${names[1]} and ${names[2]} like this`
+            break
+        default:
+            return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+            break
+    }
+}
+console.log(likes ([])) // must be "no one likes this"
+console.log(likes (["Peter"])) // must be "Peter likes this"
+console.log(likes (["Jacob", "Alex"])) // must be "Jacob and Alex like this"
+console.log(likes (["Max", "John", "Mark"])) // must be "Max, John and Mark like this"
+console.log(likes (["Alex", "Jacob", "Mark", "Max"])) // must be "Alex, Jacob and 2 others like this"*/
+
+/*/!*7 kyu You're a square!
+https://www.codewars.com/kata/54c27a33fb7da0db0100040e/solutions/javascript*!/
+let isSquare = function(n){
+    return Math.sqrt(n) % 1 === 0
+}
+console.log(isSquare(0))
+console.log(isSquare(3))*/
+
+/*/!*7 kyu Disemvowel Trolls
+https://www.codewars.com/kata/52fba66badcd10859f00097e/train/javascript*!/
+function disemvowel(str) {
+    return str.replace(/[aieou]/gi,'')
+
+}
+console.log(disemvowel("This website is for losers LOL!"))*/
+
+
