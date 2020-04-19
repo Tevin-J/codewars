@@ -249,4 +249,52 @@ function disemvowel(str) {
 }
 console.log(disemvowel("This website is for losers LOL!"))*/
 
+/*/!*7 kyu Square Every Digit
+https://www.codewars.com/kata/546e2562b03326a88e000020/solutions/javascript*!/
+function squareDigits(num){
+    return Number(num.toString().split('').map(el =>el*el).join(''))
+}
+console.log(squareDigits(9119))*/
 
+/*/!*6 kyu Sum of Digits / Digital Root
+https://www.codewars.com/kata/541c8630095125aba6000c00/solutions/javascript*!/
+function digital_root(n) {
+    if (String(n).length === 1) return n
+    const arrOfNums = [...String(n)]
+    const total = arrOfNums.reduce((accum, current) => {
+        return (
+            accum + Number(current)
+        )
+    }, 0)
+    return digital_root(total)
+}
+console.log(digital_root(16))
+console.log(digital_root(942))*/
+
+/*/!*7 kyu Exes and Ohs
+https://www.codewars.com/kata/55908aad6620c066bc00002a/solutions/javascript*!/
+function xo(str) {
+    let x = str.match(/x/gi)
+    let o = str.match(/o/gi)
+    return (x && x.length) === (o && o.length)
+}
+console.log(xo('xooxsogx'))*/
+
+/*/!*7 kyu Complementary DNA
+https://www.codewars.com/kata/554e4a2f232cdd87d9000038/solutions/javascript*!/
+const DNAStrand = (dna) => {
+    return dna
+        .replace(/T/g, 'a')
+        .replace(/C/g, 'g')
+        .replace(/G/g, 'c')
+        .replace(/A/g, 't')
+        .toUpperCase()
+};
+console.log(DNAStrand("GTATC"))*/
+
+/*/!*6 kyu Array.diff
+https://www.codewars.com/kata/523f5d21c841566fde000009/solutions/javascript*!/
+function arrayDiff(a, b) {
+    return a.filter(el => !b.includes(el))
+}
+console.log(arrayDiff([3,4], [3]))*/
