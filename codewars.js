@@ -298,3 +298,161 @@ function arrayDiff(a, b) {
     return a.filter(el => !b.includes(el))
 }
 console.log(arrayDiff([3,4], [3]))*/
+
+/*7 kyu Unique string characters
+https://www.codewars.com/kata/5a262cfb8f27f217f700000b/solutions/javascript*/
+/*function solve(a,b){
+    return [...a, ...b].reduce((acc, sym) => (
+        acc += a.includes(sym) && b.includes(sym) ? '' : sym
+    ), '')
+};
+console.log(solve("xyab", "xzca"))*/
+
+/*7 kyu Search for letters
+https://www.codewars.com/kata/52dbae61ca039685460001ae/solutions/javascript*/
+/*function change(string){
+    let str = string.toLowerCase()
+    return 'abcdefghijklmnopqrstuvwxyz'.split('').map((sym) => {
+        return str.indexOf(sym) !== -1 ? 1 : 0
+    }).join('')
+}
+console.log(change("ac **&  bZ"));*/
+
+/*String.prototype.toJadenCase = function () {
+    return this.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' ')
+};
+let str = "How can mirrors be real if our eyes aren't real";
+console.log(str.toJadenCase());*/
+
+/*7 kyu Credit Card Mask
+https://www.codewars.com/kata/5412509bd436bd33920011bc/solutions/javascript*/
+/*function maskify(cc) {
+    let arr = cc.split('')
+    for (let i=0; i<arr.length-4; i++) {
+        arr[i] = '#'
+    }
+    return arr.join('')
+}
+console.log(maskify('4556364607935616'));*/
+
+/*function removeChar(str){
+    let arr = str.split('')
+    let arr2 = []
+    for (let i = 1; i < arr.length - 1; i ++) {
+        arr2.push(str[i])
+    }
+    return arr2.join('')
+};
+console.log(removeChar('eloquent'));*/
+
+/*/!*7 kyu Sum of two lowest positive integers
+https://www.codewars.com/kata/558fc85d8fd1938afb000014/solutions/javascript*!/
+function sumTwoSmallestNumbers(numbers) {
+    numbers.sort((a, b) => a - b)
+    return numbers[0] + numbers[1]
+}
+console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]));*/
+
+/*7 kyu Sum of the first nth term of Series
+https://www.codewars.com/kata/555eded1ad94b00403000071/solutions/javascript*/
+/*function SeriesSum(n){
+    let res = 0
+    let a = 1
+    for (let i=0; i<n; i++) {
+        if (i===0) {
+            res = 1
+        } else {
+            a += 3
+            res += 1/a
+        }
+    }
+    return res.toFixed(2)
+}
+console.log(SeriesSum(2));*/
+
+/*7 kyu Remove the minimum
+https://www.codewars.com/kata/563cf89eb4747c5fb100001b/solutions/javascript*/
+/*function removeSmallest(numbers) {
+    let indexOfMin = numbers.indexOf(Math.min(...numbers))
+    return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)]
+}
+console.log(removeSmallest([1, 2, 3, 4, 5]));*/
+
+/*const binaryArrayToNumber = (arr) => parseInt(arr.join(''), 2)
+console.log(binaryArrayToNumber([0, 1, 1, 0]));*/
+
+/*8 kyu Convert number to reversed array of digits
+https://www.codewars.com/kata/5583090cbe83f4fd8c000051/solutions/javascript*/
+/*function digitize(n) {
+    let arr2 = []
+    let arr = n.toString().split('')
+    for (let i=0; i<arr.length; i++) {
+        arr2.push(Number(arr[i]))
+    }
+    return arr2.reverse()
+}
+console.log(digitize(35231));*/
+
+/*6 kyu Arrays Similar
+https://www.codewars.com/kata/51e704f2d8dbace389000279/solutions/javascript
+function arraysSimilar(arr1, arr2) {
+    return JSON.stringify(arr1.sort())===JSON.stringify(arr2.sort())
+}
+console.log(arraysSimilar([1, 2, 2, 3, 4], [2, 1, 2, 4, 3]));*/
+
+/*7 kyu Sum ALL the arrays!
+https://www.codewars.com/kata/5594463eaf1701909c0000d4/solutions/javascript*/
+/*function arraySum(arr) {
+    const b = arr.toString().split(',')
+    let sum = 0
+    for (let i = 0; i < b.length; i++) {
+        sum += Number.isNaN(Number(b[i])) ? 0 : Number(b[i])
+    }
+    return sum
+}
+console.log(arraySum([1, 2, [1, 2]]));*/
+
+/*8 kyu Remove duplicates from list
+https://www.codewars.com/kata/57a5b0dfcf1fa526bb000118/solutions/javascript*/
+/*function distinct(a) {
+    const items = {}
+    const res = []
+    for (let i = 0; i < a.length; i++) {
+        if (!items[a[i]]){
+            res.push(a[i])
+            items[a[i]] = true
+        }
+    }
+    return res
+}
+function distinct(a) {
+  return [...new Set(a)];
+}
+console.log(distinct([1, 1, 2]));*/
+
+/*7 kyu Write shortest function to calculate Average number of Array
+https://www.codewars.com/kata/56c22cdbe0c0f7cae2001789/train/javascript*/
+/*const avg = a => a.reduce((acc, cur) => acc + cur) / a.length
+console.log(avg([0, 1, 2, 3, 4]));*/
+
+/*5 kyu Valid Parentheses
+https://www.codewars.com/kata/52774a314c2333f0a7000688/solutions/javascript*/
+/*function validParentheses(parens){
+    const stack = []
+    const open = ['(', '{', '[']
+    const close = [')', '}', ']']
+
+    for (let i = 0; i < parens.length; i++) {
+        if (open.includes(parens[i])) {
+            stack.push(parens[i])
+        } else {
+            if (close.indexOf(parens[i]) === open.indexOf(stack[stack.length - 1])) {
+                stack.pop()
+            } else {
+                return false
+            }
+        }
+    }
+    return stack.length === 0
+}
+console.log(validParentheses("(())((()())())"));*/
