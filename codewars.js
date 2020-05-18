@@ -1,6 +1,6 @@
-/*/!*7 kyu Sum of Minimums
-https://www.codewars.com/kata/5d5ee4c35162d9001af7d699*!/
-function sumOfMinimums(arr) {
+/*7 kyu Sum of Minimums
+https://www.codewars.com/kata/5d5ee4c35162d9001af7d699*/
+/*function sumOfMinimums(arr) {
     let result = 0
     for (let i=0; i<arr.length; i++) {
         let min = Math.min.apply(null, arr[i])
@@ -10,9 +10,9 @@ function sumOfMinimums(arr) {
 }
 sumOfMinimums([[1,2,3,4,5], [3,5,8,2], [6,4,9,7]])*/
 
-/*/!*7 kyu Mumbling
-https://www.codewars.com/kata/mumbling*!/
-function accum(s) {
+/*7 kyu Mumbling
+https://www.codewars.com/kata/mumbling*/
+/*function accum(s) {
 console.log(
     s.split('')
         .map((char, index) => {
@@ -24,9 +24,9 @@ console.log(
 }
 accum('dfgdfg')*/
 
-/*/!*7 kyu vowel count
-https://www.codewars.com/kata/vowel-count*!/
-function getCount(str) {
+/*7 kyu vowel count
+https://www.codewars.com/kata/vowel-count*/
+/*function getCount(str) {
     /!*g - глобальное сопоставление
     i-игнорирование регистра при сопоставлении*!/
     let n = str.match(/[aeiou]/gi)
@@ -34,19 +34,19 @@ function getCount(str) {
 }
 getCount('sEgdenfdbi')*/
 
-/*/!*7 kyu highest and lowest
-https://www.codewars.com/kata/554b4ac871d6813a03000035/train/javascript*!/
-function highAndLow(numbers){
+/*7 kyu highest and lowest
+https://www.codewars.com/kata/554b4ac871d6813a03000035/train/javascript*/
+/*function highAndLow(numbers){
        let arr =  numbers.split(' ').sort((a, b) => {
         return b - a
     })
    return `${arr[0]} ${arr[arr.length -1]}`
 }
-highAndLow('12 4 122')*/
+console.log(highAndLow('12 4 122'));*/
 
-/*/!*7 kyu Get the Middle Character
-https://www.codewars.com/kata/56747fd5cb988479af000028/train/javascript*!/
-function getMiddle(s) {
+/*7 kyu Get the Middle Character
+https://www.codewars.com/kata/56747fd5cb988479af000028/train/javascript*/
+/*function getMiddle(s) {
     let arr = s.split('')
     let res
     for (let i=0; i < arr.length; i++) {
@@ -58,12 +58,11 @@ function getMiddle(s) {
     }
     console.log(res)
 }
-getMiddle("midtf")*/
+getMiddle("midtf5")*/
 
-/*/!*6 kyu Persistent Bugger.
-https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/solutions/javascript*!/
-function persistense(num) {
-    debugger
+/*6 kyu Persistent Bugger.
+https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/solutions/javascript*/
+/*function persistense(num) {
     const str = num.toString()
     if (str.length === 1) {
         return 0
@@ -71,11 +70,11 @@ function persistense(num) {
     const nextNum = str.split('').reduce((a, b) => a * b, 1)
     return 1 + persistense(nextNum)
 }
-console.log(persistense(39))*/
+console.log(persistense(379))*/
 
-/*/!*5 kyu Moving Zeros To The End
-https://www.codewars.com/kata/52597aa56021e91c93000cb0/train/javascript*!/
-const moveZeros = (arr) => {
+/*5 kyu Moving Zeros To The End
+https://www.codewars.com/kata/52597aa56021e91c93000cb0/train/javascript*/
+/*const moveZeros = (arr) => {
     console.log(arr.filter((el) => {
         return el !== 0
     }).concat(arr.filter((el) => {
@@ -84,16 +83,16 @@ const moveZeros = (arr) => {
 }
 moveZeros([1,2,0,1,0,1,0,3,0,1])*/
 
-/*/!*7 kyu Shortest Word
-https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/solutions/javascript*!/
-let findShort = (s) => {
+/*7 kyu Shortest Word
+https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/solutions/javascript*/
+/*let findShort = (s) => {
     return s.split(' ').sort((a, b) => a.length - b.length)[0].length
 }
 console.log(findShort('sdfg fgdfgdfg ertyer fg dfg'))*/
 
-/*/!*7 kyu Basic Calculator
-https://www.codewars.com/kata/5296455e4fe0cdf2e000059f/solutions/javascript*!/
-function calculate(num1, operation, num2) {
+/*7 kyu Basic Calculator
+https://www.codewars.com/kata/5296455e4fe0cdf2e000059f/solutions/javascript*/
+/*function calculate(num1, operation, num2) {
     if (operation === '/' && num2 === 0) {
         return null
     }
@@ -116,9 +115,9 @@ function calculate(num1, operation, num2) {
 }
 console.log(calculate(3.2,"/",0))*/
 
-/*/!*6 kyu Counting Duplicates
-https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1/solutions/javascript*!/
-function duplicateCount(text) {
+/*6 kyu Counting Duplicates
+https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1/solutions/javascript*/
+/*function duplicateCount(text) {
     const lowerText = text.toLowerCase()
     const obj = {}
     let count = 0
@@ -134,9 +133,10 @@ function duplicateCount(text) {
 }
 console.log(duplicateCount("aAdfsfbnwasds11"))*/
 
-/*/!*6 kyu Find the odd int
-https://www.codewars.com/kata/54da5a58ea159efa38000836/solutions/javascript*!/
-function findOdd(numbers) {
+/*6 kyu Find the odd int
+https://www.codewars.com/kata/54da5a58ea159efa38000836/solutions/javascript*/
+/*function findOdd(numbers) {
+    debugger
     let count = 0
     for (let i = 0; i < numbers.length; i++) {
         for (let j = 0; j < numbers.length; j++) {
@@ -151,25 +151,25 @@ function findOdd(numbers) {
 }
 console.log(findOdd([20,20,7]))*/
 
-/*/!*7 kyu Descending Order
-https://www.codewars.com/kata/5467e4d82edf8bbf40000155/solutions/javascript*!/
-function descendingOrder(num) {
+/*7 kyu Descending Order
+https://www.codewars.com/kata/5467e4d82edf8bbf40000155/solutions/javascript*/
+/*function descendingOrder(num) {
     return Number(num.toString().split('').sort((a, b) => b - a).join(''))
 }
 console.log(descendingOrder(3672))*/
 
-/*/!*6 kyu Find The Parity Outlier
-https://www.codewars.com/kata/5526fc09a1bbd946250002dc/solutions/javascript*!/
-function findOutlier(integers) {
+/*6 kyu Find The Parity Outlier
+https://www.codewars.com/kata/5526fc09a1bbd946250002dc/solutions/javascript*/
+/*function findOutlier(integers) {
     let even = integers.filter(el => el % 2 === 0)
     let odd = integers.filter(el => el % 2 !== 0)
     return even.length === 1 ? even[0] : odd[0]
 }
-console.log(findOutlier([2,6,8,10,3]))*/
+console.log(findOutlier([2,1,7,8]))*/
 
-/*/!*6 kyu Stop gninnipS My sdroW!
-https://www.codewars.com/kata/5264d2b162488dc400000001/solutions/javascript*!/
-function spinWords(s){
+/*6 kyu Stop gninnipS My sdroW!
+https://www.codewars.com/kata/5264d2b162488dc400000001/solutions/javascript*/
+/*function spinWords(s){
     let res = []
     let arr = s.split(' ')
     arr.forEach(word => {
@@ -456,3 +456,63 @@ https://www.codewars.com/kata/52774a314c2333f0a7000688/solutions/javascript*/
     return stack.length === 0
 }
 console.log(validParentheses("(())((()())())"));*/
+
+/*7 kyu sPoNgEbOb MeMe
+https://www.codewars.com/kata/5982619d2671576e90000017/solutions/javascript*/
+/*function spongeMeme(sentence) {
+    let res = ''
+    for (let i = 0; i < sentence.length; i++) {
+        res += (i % 2) ? sentence[i].toLowerCase() : sentence[i].toUpperCase()
+    }
+    return res
+}
+console.log(spongeMeme("stop Making spongebob Memes!"));*/
+
+/*function factorial(num) {
+ return (num !== 1) ? num * factorial(num - 1) : 1
+}
+console.log(factorial(5));*/
+
+/*console.log([1, 2, 3, 4, 5].reduce((acc, num) => {
+    acc += num
+    return acc
+}));*/
+
+/*bind*/
+/*function bind(context, fn) {
+    return function (...args) {
+        fn.apply(context, args)
+    }
+}
+ function logPerson() {
+     console.log(`Person: ${this.name}, ${this.age}, ${this.job}`);
+ }
+ const person1 = {name: 'Vasily', age: 32, job: 'Teacher'}
+ const person2 = {name: 'Dmitry', age: 19, job: 'Student'}
+
+ bind(person1, logPerson)()
+ bind(person2, logPerson)()*/
+
+/*let a = 10
+function yo(a) {
+    let f = () => {
+        let a = 12
+        return a
+    }
+    return f()
+}
+let result = yo(5)
+console.log(a);
+console.log(result);*/
+
+/*let b = {age: 19}
+let c = {age: 24}
+let a = {
+    name: 'Dima'
+}
+/!*let b = ['Minsk', 'Kiev', 'Moscow']*!/
+
+a.name = 'viktor'
+a[b] = 'Vgftnfgniktor'
+a[c] = "Viction"
+console.log(a);*/
